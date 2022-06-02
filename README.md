@@ -39,8 +39,9 @@ after we combined the lower and upper boundary we generate new image with the on
   
 
 # Guiding Image to get the values of H,S,V
+![unknown](https://user-images.githubusercontent.com/85907989/171634212-32cfa9bb-4a87-4bc7-86e6-5f5cf3449223.png)
 
-![unknown.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a182fd5c-f994-4b1a-8b69-d06c66728b9f/unknown.png)
+
 
 # part 2:
 
@@ -261,36 +262,38 @@ Comparison between RGB colors and YCbCr when we separate the colors
 ---
 
 # RGB
+![rgb](https://user-images.githubusercontent.com/85907989/171633980-bcad4463-637d-4a94-9554-04601988d9c8.png)
 
-![rgb.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ea8f1215-1fa3-4fa2-b844-94bc2d6ea48b/rgb.png)
 
 ## R
+![R](https://user-images.githubusercontent.com/85907989/171634249-6cfdb072-d47d-4fbc-8781-ac5c583d7489.jpg)
 
-![R.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a5c8f6cc-c175-4a5e-91ff-50192bba83e1/R.jpg)
 
 ## G
 
-![G.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/98c737bf-30a0-4c20-88da-9c8d781afe75/G.jpg)
+![G](https://user-images.githubusercontent.com/85907989/171634300-d1f0443a-ee48-4555-becc-f109102bf32f.jpg)
+
 
 ## B
-
-![B.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ec20de9b-bd94-4efc-9c7d-a40bfa9d7e39/B.jpg)
+![B](https://user-images.githubusercontent.com/85907989/171634346-c61f4679-04d6-41ff-8aba-792b2bb18b01.jpg)
 
 # YCbCr
 
-![ycbcr.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d5541281-a283-4c76-a688-b4da3ea57d9a/ycbcr.jpg)
+![ycbcr](https://user-images.githubusercontent.com/85907989/171634370-173c5506-edf7-4c84-8ec9-fd6a908dec3d.jpg)
 
 ## Y
 
-![Y.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eefcfd55-4da3-4cb2-bd53-d7ecf09ac067/Y.jpg)
+
+![Y](https://user-images.githubusercontent.com/85907989/171634422-75a5128d-5e08-4741-848a-2d1ac59ab71a.jpg)
 
 ## CB
+![Cb](https://user-images.githubusercontent.com/85907989/171634448-def9ce30-066f-4358-b893-d6809ba3e876.jpg)
 
-![Cb.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d7be13c7-ab79-4dcc-945d-1168daf88103/Cb.jpg)
+
 
 ## CR
+![Cr](https://user-images.githubusercontent.com/85907989/171634480-3f1639f9-a1cf-4759-8178-120ea8d56dd4.jpg)
 
-![Cr.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2531a716-5c6a-4ac6-b22d-2298f8511668/Cr.jpg)
 
 ---
 
@@ -337,7 +340,8 @@ image = cv2.imread('D:\\1.aast\\1.college\\term8\\Digital image processing\\sec 
     # ====================================================== Closing
     (T3, threshInv3) = cv2.threshold(dilated, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
     kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (7, 7))
-    closing3 = cv2.morphologyEx(threshInv3, cv2.MORPH_CLOSE, kernel)
+    closing3 = cv2.morphologyEx(threshInv3, cv2.MORPH_CLOSE, kernel)![Uploading rgb.png…]()
+
 ```
 
 > After I read the image send it to `hisEqul` method that equalize the image so all images be so similar to each other so when we perform any operation on them the values be the same for each images as can as possible 
