@@ -1,5 +1,4 @@
 # Image-Processing-segmentation-leaf
-[DB table ](https://www.notion.so/b1dedef73f934a6680f0e7ee93b06d4a)
 
 ## 1-`Alstonia_Scholaris_(P2)`
 
