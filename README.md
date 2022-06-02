@@ -67,7 +67,8 @@ then I changed the RGB color of image into gray we can apply it on `Opening and 
 after the opening and closing method some images get holes in side it  like image below
 > 
 
-![12.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9a3a3d29-50d2-4fce-b0cc-38ef206664c6/12.jpg)
+![6](https://user-images.githubusercontent.com/85907989/171635259-0c7c4e8b-983e-40f4-88ce-8248e44a25a2.jpg)
+
 
 > (2) 
 that’s why I used the `closing method` after that so i can close these holes 
@@ -600,15 +601,17 @@ out = cv2.addWeighted(src1=median3, alpha=1,src2=median4,beta=0 ,gamma=-130)
 ```
 
 # `Median 3`
+![1](https://user-images.githubusercontent.com/85907989/171635708-7100b8f3-6fdf-4a24-a58a-bbdea47786d1.jpg)
+
 
 # `Median 4`
 
-![1.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/401913e7-e586-4523-8187-4914f5d34f7f/1.jpg)
+![2](https://user-images.githubusercontent.com/85907989/171635755-6611344e-9693-41d3-9be8-06091ef0a372.jpg)
+
 
 > we used median 3 with low matrix value that’s why the image is not that clear but we want it like that cause we will use  addWieght later on
 > 
 
-![2.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eacbf9da-526c-4495-8cc9-d524738a4829/2.jpg)
 
 ### this one is much clear than the first cause we use 7*7 martix
 
@@ -619,7 +622,8 @@ i used `addWighted method =>` used 4 inputs `src1=median, alpha=3,src2=median,be
 this function work ⇒ choose 2 images and apply them together to get new enhanced one and the gamma to change the brightness of the image if the value was <0 then it will change to a darker scale if it was > 0 then it will change to a brighter image ….
 > 
 
-![5.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/483d7a02-e376-472b-b1eb-a043260140fa/5.jpg)
+![5](https://user-images.githubusercontent.com/85907989/171635831-20182e21-19fe-4336-a896-ebab1b86d8a7.jpg)
+
 
 ```python
 sharpen_filter = np.array([[-1, -1, -1],
@@ -651,11 +655,13 @@ sharpen_filter = np.array([[-1, -1, -1],
 
 # `color threshold Mask`
 
-![6.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fda73121-972a-4eb2-9fde-788101dc3138/6.jpg)
+![6](https://user-images.githubusercontent.com/85907989/171635851-9e8e4462-2219-4edc-8c17-d8ba8fec7787.jpg)
+
 
 # `cv2.bitwise_and`
 
-![bitwise_and.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c7cede34-7fb1-4d77-b2e6-9c974f81739d/bitwise_and.jpg)
+![bitwise_and](https://user-images.githubusercontent.com/85907989/171635877-0b174793-2cff-4c17-bde7-b96c1ee86f7a.jpg)
+
 
 ---
 
@@ -666,8 +672,8 @@ ero = cv2.erode(gray, (10, 10), iterations=1)
 
 > as we can see there is noise around the leaf so i use erosion to remove it
 > 
+![ero](https://user-images.githubusercontent.com/85907989/171635901-795d37a8-cabd-45d5-9bdb-3b55218466ae.jpg)
 
-![ero.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f8c59ab6-e8dc-4f95-b26a-5804b9db9abc/ero.jpg)
 
 ```python
 (T2, threshInv2) = cv2.threshold(ero, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
@@ -681,7 +687,7 @@ ero = cv2.erode(gray, (10, 10), iterations=1)
 
 ## `the image after opening`
 
-![opening.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/06da2f91-8858-4b05-a940-54eee7a5cfc2/opening.jpg)
+![opening](https://user-images.githubusercontent.com/85907989/171635938-d2209f2e-f420-42aa-8690-f3ea7baa0fc6.jpg)
 
 > here we are most of noise is removed cause of the opening and closing operation we made but as we can see there exists noise around it so i will use `median` to remove it
 > 
@@ -692,7 +698,8 @@ ero = cv2.erode(gray, (10, 10), iterations=1)
 median2 = cv2.medianBlur(opening2, 11)
 ```
 
-![median2.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0dc16a64-e39e-4e16-909c-e1d209a07e07/median2.jpg)
+![median2](https://user-images.githubusercontent.com/85907989/171635993-28583f49-c33d-4c41-9a22-090c258543fd.jpg)
+
 
 ## then i used `Closing` so if there is any holes in the image i will close it like the hole at the end of  the leeaf 
 `Closing`
